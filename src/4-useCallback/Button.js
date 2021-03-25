@@ -5,9 +5,9 @@ const Button=React.memo(({counterFn,label,n}) =>{
     let renderRef=useRef(0)
     console.log(renderRef.current++);
     return (
-        <React.Fragment>
+        <div>
             <button className="btn-primary" onClick={()=>{counterFn(n)}}>{label}</button>
-        </React.Fragment>
+        </div>
     );
 })
 

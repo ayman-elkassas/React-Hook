@@ -10,16 +10,12 @@ class App extends Component {
       title:""
     }
 
-    this.amount=React.createRef()
-
     this.countUp=this.countUp.bind(this)
     this.titleChange=this.titleChange.bind(this)
   }
 
   componentDidMount(){
     console.log("mounted");
-    console.log(this.amount.current);
-    this.amount.current.focus()
   }
 
   componentDidUpdate(){
@@ -53,10 +49,7 @@ class App extends Component {
   render() {
     return (
       <div className="container text-center">
-        <input ref={this.amount}/>
-        <br></br>
-        <button  className="btn-primary" onClick={this.countUp}>Count Up</button>      
-        <br></br>
+        <button id="btnCounter" className="btn-primary" onClick={this.countUp}>Count Up</button>
         <button className="btn-success" onClick={this.titleChange}>Title Change</button>
         <p>{this.state.count}</p>
       </div>

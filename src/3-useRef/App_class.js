@@ -10,6 +10,7 @@ class App extends Component {
       title:""
     }
 
+    //*create Reference
     this.amount=React.createRef()
 
     this.countUp=this.countUp.bind(this)
